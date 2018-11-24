@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import CommentBox from "components/CommentBox";
 import Root from "Root";
 import { mount } from "enzyme";
