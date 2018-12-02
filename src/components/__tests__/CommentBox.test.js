@@ -17,8 +17,8 @@ afterEach(() => {
   wrapper.unmount();
 });
 
-it("has a textarea and a button", () => {
-  expect(wrapper.find("button").length).toEqual(1);
+it("has a textarea and two buttons", () => {
+  expect(wrapper.find("button").length).toEqual(2);
   expect(wrapper.find("textarea").length).toEqual(1);
 });
 
@@ -35,7 +35,7 @@ describe("The Textarea", () => {
   });
 
   it("clears the textarea on Form Submission", () => {
-    wrapper.find("button").simulate("submit");
+    wrapper.find("form").simulate("submit");
     wrapper.update();
 
     expect(wrapper.find("textarea").prop("value")).toEqual("");

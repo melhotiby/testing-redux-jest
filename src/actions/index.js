@@ -1,5 +1,6 @@
 import axios from "axios";
 import { SAVE_COMMENT, FETCH_COMMENTS } from "actions/types";
+import { COMMENTS_API_URL } from "constants/index";
 
 export function saveComment(comment) {
   return {
@@ -9,8 +10,7 @@ export function saveComment(comment) {
 }
 
 export function fetchComments() {
-  const url = "http://jsonplaceholder.typicode.com/comments";
-  const response = axios.get(url);
+  const response = axios.get(COMMENTS_API_URL);
 
   return {
     type: FETCH_COMMENTS,
